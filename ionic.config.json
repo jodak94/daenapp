@@ -1,5 +1,7 @@
 {
   "name": "daenapp",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
