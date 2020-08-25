@@ -10,11 +10,15 @@
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <ion-button color="primary" (click)="openCamera()">Cámara</ion-button>
+      <ion-col size="6">
+        <ion-item>
+          <ion-button color="primary" (click)="openCamera()">Cámara</ion-button>
+        </ion-item>
       </ion-col>
-      <ion-col>
-        <ion-button color="primary" (click)="submit()">Enviar</ion-button>
+      <ion-col size="6">
+        <ion-item>
+          <ion-input [(ngModel)]="resId" placeholder="ID"></ion-input>
+        </ion-item>
       </ion-col>
     </ion-row>
     <ion-row>
@@ -22,6 +26,9 @@
         <ion-item>
           <img src="{{p}}"/><img>
         </ion-item>
+      </ion-col>
+      <ion-col size="12" *ngIf="!prevs.length">
+        <ion-button color="primary" (click)="submit()">Enviar</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

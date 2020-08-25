@@ -12,8 +12,17 @@ export class CargarFotosPage implements OnInit {
   ngOnInit() {
   }
 
-  fotos = [];
-  prevs = [];
+  fotos = [
+    'assets/img/1.jpeg',
+    'assets/img/2.jpeg',
+    'assets/img/3.jpg',
+  ];
+  prevs = [
+    'assets/img/1.jpeg',
+    'assets/img/2.jpeaag',
+    'assets/img/3.jpg',
+  ];
+  resId;
 
   options: CameraOptions = {
     quality: 100,
@@ -26,7 +35,6 @@ export class CargarFotosPage implements OnInit {
     this.camera.getPicture(this.options).then((imageData) => {
     let base64Image = 'data:image/jpeg;base64,' + imageData;
     this.fotos.push(base64Image);
-    console.log(("Img size: "+ this.getImageSize(base64Image)));
     this.createThumbnail(base64Image);
 
     }, (err) => {
