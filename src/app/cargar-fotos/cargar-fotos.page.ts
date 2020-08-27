@@ -19,7 +19,7 @@ export class CargarFotosPage implements OnInit {
   ];
   prevs = [
     'assets/img/1.jpeg',
-    'assets/img/2.jpeaag',
+    'assets/img/2.jpeg',
     'assets/img/3.jpg',
   ];
   resId;
